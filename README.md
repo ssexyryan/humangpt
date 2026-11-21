@@ -1,3 +1,27 @@
 # HumanGPT
 
-Public asynchronous human-powered prompt community. Repository initialized; full MVP source follows.
+사람이 AI 대신 답변하는 공개형 비동기 프롬프트 커뮤니티. 질문에 답하고 토큰을 채굴해 새 질문을 올립니다.
+
+## 현재 상태
+- **이 GitHub 저장소는 초기화/개발 범위 명세 단계입니다.**
+- 완성된 소스 초안 22개 파일은 채팅의 `humangpt-mvp-source.zip`로 제공됩니다.
+- 아직 이 저장소에는 소스 전체가 업로드되지 않았고, 실제 Supabase / Google OAuth / Vercel 연결과 브라우저 통합 테스트도 완료되지 않았습니다.
+- 이 저장소가 Public이므로 비밀키/개인정보를 Commit하지 마세요.
+
+## 통합 MVP 범위
+| 단계 | 개발 내용 |
+|---|---|
+| A. UI/UX | 메인 인기·최신·명예의 전당·채굴 피드, 하단 프롬프트 입력창, 모바일, 질문 상세 및 다중 답변 |
+| B. 실제 서비스 | Google 로그인, 닉네임, Supabase 질문·답변·좋아요·토큰·알림, 질문자 선정 베스트, 신고·관리자 기능 |
+| C. 출시 | 접근권한·중복 지급 검증, CI, Vercel 배포, 도메인, 보안·운영 점검 |
+
+핵심 정책: 처음 0토큰, 타인의 질문에 최초 유효 답변 +1, 질문 1건 −3, 1일 보상 최대 9, 모든 질문·답변 공개. 답변 상세 정렬은 좋아요 순이며 질문자의 베스트 선정 배지를 별도로 표시합니다.
+
+## 다음 실행 항목
+1. 소스 ZIP의 파일을 저장소 루트에 업로드 (파일 일부만 업로드하지 말 것).
+2. `npm install && npm run typecheck && npm run lint && npm run build` 실행.
+3. Supabase 새 프로젝트 생성, SQL migration 적용 및 Google OAuth 설정.
+4. 두 계정으로 토큰·좋아요·권한·알림 통합 테스트.
+5. Vercel 연결 후 미리보기 및 운영 배포.
+
+전체 소스 내 `README.md`에 세부 설정 지침이 포함되어 있습니다.
